@@ -1,3 +1,4 @@
+// Varie immaggini
 const images = [
     {
         image: 'img/01.webp',
@@ -21,3 +22,35 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+
+
+// contenitori vari
+let img_contenitore = document.getElementById("img")
+let title_contenitore = document.getElementById("title")
+let text_contenitore = document.getElementById("text")
+
+// bottoni
+// indicearray
+let indiceArray = 0;
+    // bottone next
+    document.getElementById("bottonenext").addEventListener("click", function () {
+        if(indiceArray < images.length - 1){
+            indiceArray += +1;
+            img_contenitore.src =(images[indiceArray].image);
+            title_contenitore.textContent = (images[indiceArray].title)
+            text_contenitore.textContent = (images[indiceArray].text)
+        }
+        console.log(indiceArray)
+    });
+
+    // bottone prev
+    document.getElementById("bottoneprev").addEventListener("click", function () {
+        if(indiceArray > 0){
+            indiceArray += -1;
+            img_contenitore.src =(images[indiceArray].image);
+            title_contenitore.textContent = (images[indiceArray].title)
+            text_contenitore.textContent = (images[indiceArray].text)
+        }
+        console.log(indiceArray)
+    });
+
