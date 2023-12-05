@@ -40,6 +40,12 @@ let indiceArray = 0;
             title_contenitore.textContent = (images[indiceArray].title)
             text_contenitore.textContent = (images[indiceArray].text)
         }
+        else{
+            indiceArray = 0
+            img_contenitore.src =(images[indiceArray].image);
+            title_contenitore.textContent = (images[indiceArray].title)
+            text_contenitore.textContent = (images[indiceArray].text)
+        }
         console.log(indiceArray)
     });
 
@@ -47,6 +53,12 @@ let indiceArray = 0;
     document.getElementById("bottoneprev").addEventListener("click", function () {
         if(indiceArray > 0){
             indiceArray += -1;
+            img_contenitore.src =(images[indiceArray].image);
+            title_contenitore.textContent = (images[indiceArray].title)
+            text_contenitore.textContent = (images[indiceArray].text)
+        }
+        else{
+            indiceArray= 4
             img_contenitore.src =(images[indiceArray].image);
             title_contenitore.textContent = (images[indiceArray].title)
             text_contenitore.textContent = (images[indiceArray].text)
