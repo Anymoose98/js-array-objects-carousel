@@ -229,6 +229,7 @@ if(indiceArray == 0){
     })
 
     startTempo.addEventListener("click", function(){
+        clearInterval(tempo);
         tempo = funzione_tempo()
     })
 
